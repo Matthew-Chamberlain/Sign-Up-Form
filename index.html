@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <main>
+            <div class="imageHolder">
+                <div class="logoHolder">
+                    <img src="/resources/odin-lined.png" height="100%">
+                    <label id="logoText">ODIN</label>
+                </div>
+                <label id="creditText">Photo by <a class="creditLink" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a class="creditLink" href="https://unsplash.com/">Unisplash</a></label>
+            </div>
+            <div class="contentHolder">
+                <div class="paragraphHolder">
+                    <p>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams. <br> Sign up <i>now</i> to get started. <br><br>You <i>know</i> you want to.</p>
+                </div>
+                <div class="formHolder">
+                    <form  id="logIn" action="#" method="post">
+                        <h1 id="formLabel">Let's do this!</h1>
+                        <label style="width: 100%; margin-bottom: 1rem; color: red">Fields marked with * are required</label>
+                        <div class="formContent">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" onfocus="inputFocus(this)" oninput="inputChange(this)" onblur="inputBlur(this)" placeholder="E.g John" required>
+                        </div>
+                        <div class="formContent">
+                            <label for="secondName">Second Name *</label>
+                            <input type="text" id="secondName" name="secondName" onfocus="inputFocus(this)" oninput="inputChange(this)" onblur="inputBlur(this)" placeholder="E.g Smith" required>
+                        </div>
+                        <div class="formContent">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" onfocus="inputFocus(this)" oninput="inputChange(this)" onblur="inputBlur(this)" placeholder="E.g exampleEmail@email.com" required>
+                            <label class ="errorMessage"id="emailError"></label>
+                        </div>
+                        <div class="formContent">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="number" id="phoneNumber" name="phoneNumber" onfocus="inputFocus(this)" oninput="inputChange(this)" onblur="inputBlur(this)" placeholder="E.g 0800001066">
+                        </div>
+                        <div class="formContent">
+                            <label for="password">Password *</label>
+                            <input type="password" id="password" name="password" onfocus="inputFocus(this)" oninput="inputChange(this)" onblur="inputBlur(this)" minlength="8" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                            <label class ="errorMessage"id="passwordLengthError"></label>
+                            <label class ="errorMessage"id="passwordCaseError"></label>
+                            <label class ="errorMessage"id="passwordNumberError"></label>
+                        </div>
+                        <div class="formContent">
+                            <label for="passwordConfirm">Confirm Password *</label>
+                            <input type="password" id="passwordConfirm" name="passwordConfirm" onfocus="inputFocus(this)" oninput="inputChange(this)" onblur="inputBlur(this)"  required>
+                            <label class ="errorMessage"id="confirmPasswordError"></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="buttonHolder">
+                    <button type="submit" form="logIn" onclick="submitForm()">Create Account</button>
+                    <label id="loginText">Already have an account? <a class="loginLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Log in</a></label>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -1,0 +1,239 @@
+body{
+    margin: 0;
+    height: 100vh;
+    min-height: 100%;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imageHolder{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    flex: 1;
+    background: url(/resources/halie-west-25xggax4bSA-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logoHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-top: 15rem;
+    padding: 1rem 0 1rem 0;
+}
+
+img{
+    width: 10rem;
+    height: 10rem;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(/resources/Norse-Bold.otf);
+}
+
+#logoText{
+    font-family: Norse-Bold, system-ui;
+    color: white;
+    font-size: 8rem;
+    margin-left: 1rem;
+}
+
+#creditText{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.creditLink{
+    color: white;
+}
+
+.creditLink:hover{
+    color: rgb(219, 219, 219);
+}
+
+.contentHolder{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.paragraphHolder{
+    display: flex;
+    align-items: center;
+    flex: 1.5;
+    width: 100%;
+    background-color: #f9fafc;
+    
+}
+
+p{
+    font-size: calc(16px + 1vw);
+    padding: 0 10rem 0 3rem;
+}
+.formHolder{
+    flex: 1;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0px 5px lightgrey;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 2rem 2rem 2rem;
+}
+
+#formLabel{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.formContent{
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem 2rem 0;
+    width: 40%;
+}
+
+input{
+    margin-top: 0.5rem;
+    height: 1.7rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+
+/*input:focus{
+    border-color: lightblue;
+}*/
+
+.buttonHolder{
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f9fafc
+}
+
+button{
+    margin: 2rem;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #596D48;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 5px 5px lightgray;
+}
+
+button:hover{
+    background-color: #4a5a3c;
+}
+
+button:active{
+    transform: translateY(5px);
+    box-shadow: 0 10px 5px darkgray;
+}
+
+#loginText{
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.loginLink{
+    text-decoration: none;
+    font-weight: bold;
+    color: #596D48;
+}
+
+.loginLink:hover{
+    color: #4a5a3c;
+    text-decoration: underline;
+}
+
+.errorMessage{
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+@media screen and (max-width: 1150px) {
+    main{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .imageHolder {
+        width: 100vw;
+        height: 2rem;
+        
+        justify-content: center;
+    }
+    .logoHolder{
+        margin: 10vh 0 10vh 0;
+        height: auto;
+    }
+
+    .contentHolder{
+        justify-content: center;
+    }
+
+    p{
+        text-align: center;
+        padding: 0 3rem 0 3rem;
+    }
+
+    form {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .formContent{
+        justify-content: center;
+        padding-right: 0;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    .buttonHolder{
+        align-items: center;
+    }
+
+    #loginText{
+        margin: 0;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide spin buttons in Firefox */
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
