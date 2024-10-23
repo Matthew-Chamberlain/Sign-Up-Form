@@ -42,7 +42,7 @@ img{
 
 @font-face {
     font-family: Norse-Bold;
-    src: url(/resources/Norse-Bold.otf);
+    src: url(./resources/Norse-Bold.otf);
 }
 
 #logoText{
